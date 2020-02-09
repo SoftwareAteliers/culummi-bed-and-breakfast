@@ -5,10 +5,12 @@
     "baseUrl": "./",
     "paths": {
       "components/*": ["src/components/*"],
+      "content/*": ["content/*"],
       "layouts/*": ["src/layouts/*"],
       "pages/*": ["src/pages/*"],
       "templates/*": ["src/templates/*"],
-      "scss/*": ["src/scss/*"]
+      "scss/*": ["src/scss/*"],
+      "img/*": ["src/img/*"]
     }
   },
   "exclude": ["node_modules", "public", ".cache"]

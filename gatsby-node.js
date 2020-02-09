@@ -1,6 +1,7 @@
 const each = require('lodash/each')
 const path = require('path')
 const PostTemplate = path.resolve('./src/templates/index.js')
+const RoomTemplate = path.resolve('./src/templates/index.js')
 
 exports.createPages = ({ graphql, actions }) => {
   const { createPage } = actions
@@ -34,7 +35,7 @@ exports.createPages = ({ graphql, actions }) => {
           reject(errors)
         }
 
-        // Create blog posts & pages.
+        // Create blog posts & pages & rooms.
         const items = data.allFile.edges
         const posts = items.filter(({ node }) => /posts/.test(node.name))
         each(posts, ({ node }) => {
@@ -43,6 +44,16 @@ exports.createPages = ({ graphql, actions }) => {
           createPage({
             path,
             component: PostTemplate,
+          })
+        })
+
+        const rooms = items.filter(({ node }) => /rooms/.test(node.name))
+        each(rooms, ({ node }) => {
+          if (!node.remark) return
+          const { path } = node.remark.frontmatter
+          createPage({
+            path,
+            component: RoomTemplate,
           })
         })
 
@@ -66,8 +77,13 @@ exports.onCreateWebpackConfig = ({ actions }) => {
     resolve: {
       alias: {
         components: path.resolve(__dirname, 'src/components'),
+        content: path.resolve(__dirname, 'content'),
         templates: path.resolve(__dirname, 'src/templates'),
         scss: path.resolve(__dirname, 'src/scss'),
+        img: path.resolve(__dirname, 'src/assets/img'),
+        fonts: path.resolve(__dirname, 'src/assets/fonts'),
+        js: path.resolve(__dirname, 'src/assets/js'),
+        css: path.resolve(__dirname, 'src/assets/css'),
       },
     },
   })

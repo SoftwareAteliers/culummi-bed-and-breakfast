@@ -3,6 +3,7 @@ import get from 'lodash/get'
 import React from 'react'
 
 import Post from 'templates/post'
+import Room from 'templates/room'
 import Meta from 'components/meta'
 import Layout from 'components/layout'
 import Page from 'templates/page'
@@ -15,13 +16,23 @@ const Template = ({ data, location }) => (
         site={get(data, 'site.meta')}
       />
       {get(data, 'post.frontmatter.layout') != 'page' ? (
-        <Post
-          data={get(data, 'post')}
-          options={{
-            isIndex: false,
-            adsense: get(data, 'site.meta.adsense'),
-          }}
-        />
+        get(data, 'post.frontmatter.layout') === 'room' ? (
+          <Room
+            data={get(data, 'post')}
+            options={{
+              isIndex: false,
+              adsense: get(data, 'site.meta.adsense'),
+            }}
+          />
+        ) : (
+          <Post
+            data={get(data, 'post')}
+            options={{
+              isIndex: false,
+              adsense: get(data, 'site.meta.adsense'),
+            }}
+          />
+        )
       ) : (
         <Page {...this.props} />
       )}
@@ -38,8 +49,24 @@ export const pageQuery = graphql`
         description
         url: siteUrl
         author
-        twitter
         adsense
+        phone
+        email
+        name
+        vat
+        address {
+          street
+          number
+          postalCode
+          city
+          province
+          country
+        }
+        social {
+          facebook
+          tripadvisor
+          instagram
+        }
       }
     }
     post: markdownRemark(frontmatter: { path: { eq: $path } }) {

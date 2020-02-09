@@ -1,11 +1,30 @@
 module.exports = {
   siteMetadata: {
-    title: 'Gatstrap',
-    description: 'Gatsby starter for bootstrap a blog',
-    siteUrl: 'https://gatstrap.netlify.com',
-    author: 'jaxx2104',
-    twitter: 'jaxx2104',
+    title: 'B&B Culummi Cavallino',
+    description:
+      'Culummi Bed & Breakfast a Cavallino di Lecce, per le tue vacanze nel Salento. Prenota ora!',
+    siteUrl: 'https://www.culummi.it',
+    author: 'Software Ateliers',
+    authorUrl: 'https://softwareateliers.com',
     adsense: '',
+    phone: '+39 346 27 06 323',
+    email: 'liculummi@gmail.com',
+    name: 'Culummi Bed & Breakfast',
+    vat: 'vat number',
+    address: {
+      street: 'Via XXIV Maggio',
+      number: '49a',
+      postalCode: '73020',
+      city: 'Cavallino',
+      province: 'Lecce',
+      country: 'Italia',
+    },
+    social: {
+      facebook: 'https://www.facebook.com/culummi/',
+      tripadvisor:
+        'https://www.tripadvisor.com/Hotel_Review-g1406923-d8070862-Reviews-Culummi_Bed_Breakfast-Cavallino_Province_of_Lecce_Puglia.html',
+      instagram: 'https://www.instagram.com/culummi_bb',
+    },
   },
   pathPrefix: '/',
   plugins: [
@@ -14,6 +33,20 @@ module.exports = {
       options: {
         path: `${__dirname}/content/posts/`,
         name: 'posts',
+      },
+    },
+    {
+      resolve: 'gatsby-source-filesystem',
+      options: {
+        path: `${__dirname}/content/rooms/`,
+        name: 'rooms',
+      },
+    },
+    {
+      resolve: 'gatsby-source-filesystem',
+      options: {
+        path: `${__dirname}/content/blocks/`,
+        name: 'blocks',
       },
     },
     {

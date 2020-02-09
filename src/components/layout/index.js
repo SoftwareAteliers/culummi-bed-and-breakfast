@@ -2,14 +2,36 @@ import React from 'react'
 import emergence from 'emergence.js'
 
 import Navi from 'components/navi'
+import Navbar from 'components/navbar'
 import Footer from 'components/footer'
 import { siteMetadata } from '../../../gatsby-config'
 
-import 'modern-normalize/modern-normalize.css'
-import 'prismjs/themes/prism.css'
+// ----------------- original template to remove
+// import 'modern-normalize/modern-normalize.css'
+// import 'prismjs/themes/prism.css'
 import 'scss/gatstrap.scss'
-import 'animate.css/animate.css'
+// import 'animate.css/animate.css'
 import 'font-awesome/css/font-awesome.css'
+// ----------------- original template to remove
+
+// ----------------- template colorlib
+// import './all.sass'
+// import 'css/bootstrap.min.css'
+// import 'css/animate.css'
+// import 'css/flaticon.css'
+// import 'css/owl.carousel.min.css'
+// import 'css/aos.css'
+import 'css/bootstrap-datepicker.css'
+import 'css/jquery.timepicker.css'
+import 'css/fancybox.min.css'
+import 'fonts/ionicons/css/ionicons.min.css'
+// import 'fonts/fontawesome/css/font-awesome.min.css'
+import 'css/style.css'
+import 'css/responsive.css'
+// ----------------- template colorlib
+
+import 'slick-carousel/slick/slick.css'
+import 'slick-carousel/slick/slick-theme.css'
 
 class Layout extends React.Component {
   componentDidMount() {
@@ -24,9 +46,11 @@ class Layout extends React.Component {
     const { children } = this.props
     return (
       <div>
-        <Navi title={siteMetadata.title} {...this.props} />
+        {/* <Navi title={siteMetadata.title} {...this.props} /> */}
+        <Navbar />
         {children}
-        <Footer title={siteMetadata.title} author={siteMetadata.author} />
+        {/* <Footer title={siteMetadata.title} author={siteMetadata.author} /> */}
+        <Footer site={siteMetadata} />
       </div>
     )
   }

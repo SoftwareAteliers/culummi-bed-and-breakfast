@@ -1,0 +1,13 @@
+.custom-breadcrumbs {
+  li {
+    &:after {
+      content: '\02022';
+      margin-left: 0.3em;
+    }
+    &:last-child {
+      &:after {
+        content: none;
+      }
+    }
+  }
+}

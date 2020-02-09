@@ -18,7 +18,7 @@ class Profile extends React.Component {
     const back2 = get(data, 'back2.childImageSharp.sizes')
 
     return (
-      <Layout location={location}>
+      <Layout location={location} site={get(data, 'site.meta')}>
         <Meta site={siteMetadata} title="Profile" />
         <div>
           <section className="text-center">

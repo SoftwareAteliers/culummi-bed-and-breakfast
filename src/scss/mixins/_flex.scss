@@ -1,0 +1,16 @@
+@mixin display-flex($value) {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: $value;
+}
+
+@mixin flex($value) {
+  -webkit-box-flex: 0;
+  -ms-flex: $value;
+  flex: $value;
+}
+
+@mixin flex-wrap($value) {
+  -ms-flex-wrap: $value;
+  flex-wrap: $value;
+}
