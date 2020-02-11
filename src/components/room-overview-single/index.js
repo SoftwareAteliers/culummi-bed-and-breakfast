@@ -6,7 +6,7 @@ import get from 'lodash/get'
 import testImage2 from 'img/rooms/room_2.jpg'
 
 const RoomFull = ({ room, leftToRight }) => {
-  const { services, title, image, path } = room.doc.frontmatter
+  const { services, title, image, path, price } = room.doc.frontmatter
   const fluid = get(image, 'childImageSharp.fluid')
   return (
     <ScrollAnimation animateOnce animateIn="fadeInUp" duration={0.5}>
@@ -19,17 +19,19 @@ const RoomFull = ({ room, leftToRight }) => {
           style={{ backgroundImage: 'url(' + testImage2 + ')' }}
         ></a>
         <div className={'text' + (leftToRight ? ' order-1' : '')}>
-          <span className="d-block mb-4">
-            <span className="display-4 text-primary">$299</span>
-            <span className="text-uppercase letter-spacing-2">/ per night</span>
-          </span>
-          <h2 className="mb-4">{title}</h2>
+          <h2 className="mb-4 display-4 text-primary">{title}</h2>
           <p>
             Far far away, behind the word mountains, far from the countries
             Vokalia and Consonantia, there live the blind texts. Separated they
             live in Bookmarksgrove right at the coast of the Semantics, a large
             language ocean.
           </p>
+
+          <span className="text-uppercase letter-spacing-2">a partire da</span>
+          <span className="d-block mb-4">
+            <span className="display-4 text-primary">{price} €</span>
+            <span className="text-uppercase letter-spacing-2"> / notte</span>
+          </span>
           <p>
             <Link className="btn btn-primary text-white" to={path}>
               Book Now

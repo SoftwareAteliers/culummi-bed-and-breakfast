@@ -30,6 +30,8 @@ import 'css/style.css'
 import 'css/responsive.css'
 // ----------------- template colorlib
 
+import 'react-dates/initialize'
+import 'react-dates/lib/css/_datepicker.css'
 import 'slick-carousel/slick/slick.css'
 import 'slick-carousel/slick/slick-theme.css'
 

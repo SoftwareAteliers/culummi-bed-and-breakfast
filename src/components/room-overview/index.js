@@ -1,8 +1,5 @@
 import React from 'react'
-import ScrollAnimation from 'react-animate-on-scroll'
-import Room from 'components/room-full'
-import testImage from 'img/rooms/room_1.jpg'
-import testImage2 from 'img/rooms/room_2.jpg'
+import Room from 'components/room-overview-single'
 
 const RoomsFull = ({ rooms }) => (
   <section className="section bg-light">

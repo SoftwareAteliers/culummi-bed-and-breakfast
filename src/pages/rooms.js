@@ -7,7 +7,7 @@ import Meta from 'components/meta'
 import Layout from 'components/layout'
 import HeroImage from 'components/hero-image'
 import Comments from 'components/comments'
-import RoomsFull from 'components/rooms-full'
+import RoomsFull from 'components/room-overview'
 import ReservationBanner from 'components/reservation-banner'
 
 const RoomsPage = ({ data, location }) => {
@@ -71,6 +71,7 @@ export const pageQuery = graphql`
             category
             tags
             services
+            price
             description
             date(formatString: "YYYY/MM/DD")
             image {

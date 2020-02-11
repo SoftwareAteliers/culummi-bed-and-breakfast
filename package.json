@@ -29,6 +29,7 @@
     "gatsby-transformer-remark": "2.6.45",
     "gatsby-transformer-sharp": "2.3.9",
     "react-animate-on-scroll": "^2.1.5",
+    "react-dates": "^21.8.0",
     "react-reveal": "^1.2.2",
     "react-slick": "^0.25.2",
     "slick-carousel": "^1.8.1"

@@ -96,6 +96,7 @@ export const pageQuery = graphql`
             category
             tags
             services
+            price
             description
             date(formatString: "YYYY/MM/DD")
             image {
