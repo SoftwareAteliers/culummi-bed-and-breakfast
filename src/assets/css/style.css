@@ -946,12 +946,7 @@ textarea.form-control {
   border-color: #343a40;
 }
 
-.contact-section .contact-info p {
-  /* font-family: 'Playfair Display', times, serif; */
-  /* font-size: 30px; */
-  margin-bottom: 30px;
-}
-.contact-section .contact-info p .d-block {
+.contact-section .contact-info .d-block {
   font-size: 14px;
   letter-spacing: 0.2em;
   font-weight: bold;
@@ -1865,6 +1860,7 @@ textarea.form-control {
   background: #0f0f16;
   height: 30px;
   line-height: 16px;
+  padding-top: 2px;
 }
 .top_menu .float-left {
   padding: 7px 0;
@@ -1971,4 +1967,62 @@ textarea.form-control {
   height: auto;
   margin-top: -6px;
   right: 20px;
+}
+
+.top-nav-text {
+  float: left;
+}
+
+.top-nav-icon-blocks {
+  float: right;
+}
+
+.top-nav-icon-blocks .icon-block {
+  display: inline-block;
+  padding: 0 10px;
+  text-align: right;
+}
+
+.top-nav-icon-blocks .icon-block:last-child {
+  padding: 0 0 0 10px;
+}
+
+.top-nav-icon-blocks .icon-block a:hover {
+  text-decoration: none;
+}
+
+.top-nav-icon-blocks .icon-block i {
+  padding-right: 6px;
+}
+
+.top-nav-icon-blocks .icon-block p,
+.top-nav-icon-blocks .icon-block a,
+.top-nav-text p,
+.top-nav-text a {
+  font-size: 12px;
+  line-height: 26px;
+  margin: 0;
+}
+
+.top-nav-icon-blocks .icon-block i {
+  font-size: 13px;
+}
+
+/* .banner[data-transparent-header='true'] .top-nav-icon-blocks .icon-block p,
+.banner[data-transparent-header='true'] .top-nav-icon-blocks .icon-block a,
+.banner[data-transparent-header='true'] .top-nav-text p,
+.banner[data-transparent-header='true'] .top-nav-text a {
+  color: #fff;
+}
+
+.banner[data-transparent-header='true'] .top-nav {
+  background: rgba(255, 255, 255, 0.1);
+} */
+
+@media (min-width: 992px) {
+  .top-nav .row {
+    padding-right: 0;
+    padding-left: 0;
+    margin-left: 0;
+  }
 }

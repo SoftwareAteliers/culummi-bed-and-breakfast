@@ -8,8 +8,6 @@ import instagram from 'img/social/instagram.svg'
 import twitter from 'img/social/twitter.svg'
 import vimeo from 'img/social/vimeo.svg'
 
-import contactData from 'content/contact.json'
-
 // TODO: find correct way how to use scripts
 // import "img/social/vimeo.svg";
 
@@ -108,7 +106,7 @@ const Footer = ({ site }) => (
                 placeholder="Email..."
               />
               <button type="submit" className="btn">
-                <span className="fa fa-paper-plane" />
+                <i className="fa fa-paper-plane"></i>
               </button>
             </div>
           </form>
@@ -124,13 +122,13 @@ const Footer = ({ site }) => (
 
         <p className="col-md-6 text-right social">
           <a href={get(site, 'social.instagram')} target="_blank">
-            <span className="fa fa-instagram" />
+            <i className="fa fa-instagram"></i>
           </a>
           <a href={get(site, 'social.facebook')} target="_blank">
-            <span className="fa fa-facebook" />
+            <i className="fa fa-facebook"></i>
           </a>
           <a href={get(site, 'social.tripadvisor')} target="_blank">
-            <span className="fa fa-tripadvisor" />
+            <i className="fa fa-tripadvisor"></i>
           </a>
         </p>
       </div>
