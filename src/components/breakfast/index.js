@@ -1,6 +1,9 @@
 import React from 'react'
+import { Link } from 'gatsby'
 import ScrollAnimation from 'react-animate-on-scroll'
 import Slider from 'react-slick'
+import img1 from 'img/breakfast/01.jpg'
+import img2 from 'img/breakfast/02.jpg'
 
 function SampleNextArrow(props) {
   const { className, style, onClick } = props
@@ -67,8 +70,16 @@ const Breakfast = () => {
       <div className="container">
         <div className="row justify-content-center text-center mb-5">
           <div className="col-md-7">
+            <ScrollAnimation animateOnce animateIn="fadeInDown" duration={0.5}>
+              <h2 className="heading">Le nostre colazioni</h2>
+            </ScrollAnimation>
+          </div>
+        </div>
+
+        {/*  <div className="row justify-content-center text-center mb-5">
+          <div className="col-md-7">
             <ScrollAnimation animateOnce animateIn="fadeInUp" duration={0.5}>
-              <h2 className="heading">Breakfast</h2>
+              <h2 className="heading">Le nostre colazioni</h2>
             </ScrollAnimation>
             <ScrollAnimation
               animateOnce
@@ -77,15 +88,54 @@ const Breakfast = () => {
               duration={0.5}
             >
               <p>
-                Far far away, behind the word mountains, far from the countries
-                Vokalia and Consonantia, there live the blind texts. Separated
-                they live in Bookmarksgrove right at the coast of the Semantics,
-                a large language ocean.
+                La colazione è un'occasione speciale al Culummi B&B!
+                É preparata
+                per voi quotidianamente, sempre con prodotti freschi e a km 0.
+                Consiste di una vasta gamma di prelibatezze iniziando da torte,
+                biscotti, muffin fino a marmellate e yogurt fatti in casa, pane,
+                cereali e prodotti tipici del Salento. Naturalmente, sempre
+                servita con un sorriso!
               </p>
             </ScrollAnimation>
           </div>
+        </div> */}
+
+        <div className="row justify-content-center mb-5">
+          <div className="col-xs-6 col-md-3">
+            <ScrollAnimation animateOnce animateIn="fadeInDown" duration={0.5}>
+              <img src={img1} />
+            </ScrollAnimation>
+          </div>
+          <div className="col-xs-6 col-md-3">
+            <div style={{ height: '130px' }} aria-hidden="true"></div>
+            <ScrollAnimation animateOnce animateIn="fadeInUp" duration={0.5}>
+              <img src={img2} />
+            </ScrollAnimation>
+          </div>
+          <div className="col-xs-6 col-md-5">
+            <div style={{ height: '130px' }} aria-hidden="true"></div>
+            <ScrollAnimation animateOnce animateIn="fadeIn" duration={0.5}>
+              {/* <h2>Le nostre colazioni</h2> */}
+              <p>
+                É preparata per voi quotidianamente, sempre con prodotti freschi
+                e a km 0.
+              </p>
+              <p className="text-justify">
+                Consiste di una vasta gamma di prelibatezze iniziando da torte,
+                biscotti, muffin fino a marmellate e yogurt fatti in casa, pane,
+                cereali e prodotti tipici del Salento.
+              </p>
+              <p>Naturalmente, sempre servita con un sorriso!</p>
+              <div className="row justify-content-center my-3 py-3 px-5">
+                <Link to={'/contact'} className="btn btn-primary text-white">
+                  Scopri di più
+                </Link>
+              </div>
+            </ScrollAnimation>
+          </div>
         </div>
-        <Slider {...settings}>
+
+        {/* <Slider {...settings}>
           <div>
             <img src="http://placekitten.com/g/400/200" />
           </div>
@@ -98,7 +148,7 @@ const Breakfast = () => {
           <div>
             <img src="http://placekitten.com/g/400/200" />
           </div>
-        </Slider>
+        </Slider> */}
       </div>
     </section>
   )

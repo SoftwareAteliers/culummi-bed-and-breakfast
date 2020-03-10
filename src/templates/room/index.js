@@ -72,7 +72,7 @@ const Room = ({ data, options }) => {
         heading={title}
         breadcrumbs={[
           { name: 'home', url: '/' },
-          { name: 'rooms', url: '/rooms' },
+          { name: 'Le Camere', url: '/rooms' },
           { name: title },
         ]}
       />
@@ -188,10 +188,10 @@ const Room = ({ data, options }) => {
                       Vista<span>Terrazza</span>
                     </h6>
                     <h6>
-                      Capacità<span>3 posti</span>
+                      Capacità<span>1 - 3 posti</span>
                     </h6>
                     <h6>
-                      Letto<span>King size</span>
+                      Letto<span>Extra Large</span>
                     </h6>
                   </div>
 
@@ -248,7 +248,7 @@ const Room = ({ data, options }) => {
                 </div>
 
                 <div className="room-service">
-                  <h3>Room Services</h3>
+                  <h3>Servizi in camera</h3>
 
                   <ul>
                     <li>

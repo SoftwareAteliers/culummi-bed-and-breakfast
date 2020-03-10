@@ -42,21 +42,21 @@ const Footer = ({ site }) => (
             <li>
               <a href="#">Privacy Policy</a>
             </li>
-            <li>
-              <Link to={'/rooms'}>Rooms</Link>
-            </li>
+            {/* <li>
+              <Link to={'/rooms'}>Le Camere</Link>
+            </li> */}
           </ul>
         </div>
         <div className="col-md-3 mb-5">
           <ul className="list-unstyled link">
             <li>
-              <Link to={'/rooms'}>The Rooms &amp; Suites</Link>
+              <Link to={'/rooms'}>Le Camere</Link>
             </li>
             <li>
-              <Link to={'/contact'}>Contact Us</Link>
+              <Link to={'/contact'}>Contattaci</Link>
             </li>
             <li>
-              <Link to={'/services'}>Services</Link>
+              <Link to={'/services'}>Scopri i dintorni</Link>
             </li>
           </ul>
         </div>

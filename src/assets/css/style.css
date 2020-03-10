@@ -1417,7 +1417,11 @@ textarea.form-control {
   position: relative;
   display: block;
 }
-.room .img-wrap {
+/* .room .img-wrap {
+  position: relative;
+  overflow: hidden;
+} */
+.img-wrap {
   position: relative;
   overflow: hidden;
 }

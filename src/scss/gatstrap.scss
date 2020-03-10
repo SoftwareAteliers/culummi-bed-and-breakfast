@@ -9,16 +9,16 @@
 @import './colors.scss';
 
 // // Reassign color vars to semantic color scheme
-// $theme-colors: (
-//   primary: $purple,
-//   secondary: $gray-600,
-//   success: $green,
-//   info: $cyan,
-//   warning: $yellow,
-//   danger: $red,
-//   light: $gray-100,
-//   dark: $gray-800,
-// ) !default;
+$theme-colors: (
+  'primary': $red,
+  // secondary: $gray-600,
+    // success: $green,
+    // info: $cyan,
+    // warning: $yellow,
+    // danger: $red,
+    // light: $gray-100,
+    // dark: $gray-800,,,,,,,,,,
+) !default;
 
 // // Options
 // //
@@ -88,6 +88,44 @@ img {
   max-width: 100%;
 }
 
-img:hover {
-  animation: pulse 0.5s;
+// img:hover {
+//   animation: pulse 0.5s;
+// }
+
+.img-hover-zoom {
+  img {
+    transition: transform 0.5s ease !important;
+    margin: 0;
+  }
+  img:hover {
+    transform: scale(1.5);
+  }
 }
+
+.btn-primary:hover {
+  color: theme-color('primary') !important;
+  background-color: $white;
+}
+
+.image-title {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  bottom: 8px;
+}
+
+// .image-subtitle {
+//   position: absolute;
+//   left: 50%;
+//   transform: translate(-50%, -50%);
+//   bottom: 8px;
+// }
+
+// .img-hover-zoom-out {
+//   img {
+//     transition: transform 0.5s ease !important;
+//   }
+//   img:hover {
+//     transform: scale(0.75);
+//   }
+// }

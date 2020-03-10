@@ -20,7 +20,7 @@ const Room = ({ room }) => {
           {fluid ? (
             <Img
               fluid={fluid}
-              className="img-fluid mb-3"
+              className="img-fluid img-hover-zoom mb-3"
               alt="Free website template"
             />
           ) : (
@@ -29,9 +29,9 @@ const Room = ({ room }) => {
         </figure>
         <div className="p-3 text-center room-info">
           <h2>{title}</h2>
-          <span className="text-uppercase letter-spacing-1">
+          {/* <span className="text-uppercase letter-spacing-1">
             90$ / per night
-          </span>
+          </span> */}
         </div>
       </Link>
 

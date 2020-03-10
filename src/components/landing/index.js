@@ -13,13 +13,12 @@ const LandingPage = () => (
         <ScrollAnimation
           animateOnce
           className="col-md-10 text-center"
-          animateIn="fadeInUp"
-          duration={0.5}
+          animateIn="flipInY"
         >
           <span className="custom-caption text-uppercase text-white d-block  mb-3">
-            Welcome To 5 <span className="fa fa-star text-primary" /> Hotel
+            Benvenuti al Culummi Bed and Breakfast
           </span>
-          <h1 className="heading">A Best Place To Stay</h1>
+          <h1 className="heading">il soggiorno perfetto</h1>
         </ScrollAnimation>
       </div>
     </div>

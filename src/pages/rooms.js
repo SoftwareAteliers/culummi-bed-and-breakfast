@@ -18,8 +18,8 @@ const RoomsPage = ({ data, location }) => {
     <Layout location={location} site={get(data, 'site.meta')}>
       <Meta site={get(data, 'site.meta')} />
       <HeroImage
-        heading={'Rooms'}
-        breadcrumbs={[{ name: 'home', url: '/' }, { name: 'rooms' }]}
+        heading={'Le Camere'}
+        breadcrumbs={[{ name: 'home', url: '/' }, { name: 'Le Camere' }]}
       />
       <RoomsFull rooms={rooms} />
       {/* <Comments /> */}

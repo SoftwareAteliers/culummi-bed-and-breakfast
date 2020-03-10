@@ -285,7 +285,7 @@ const Navbar = class extends React.Component {
                                 aria-haspopup="true"
                                 aria-expanded="false"
                               >
-                                Rooms
+                                Le Camere
                               </Link>
                               <ul className="dropdown-menu">
                                 {rooms.map((room, i) => {
@@ -304,7 +304,17 @@ const Navbar = class extends React.Component {
                             </li>
                             <li className="nav-item">
                               <Link to={'/contact'} className="nav-link">
-                                Contact
+                                Colazione
+                              </Link>
+                            </li>
+                            <li className="nav-item">
+                              <Link to={'/experiences'} className="nav-link">
+                                Esperienze
+                              </Link>
+                            </li>
+                            <li className="nav-item">
+                              <Link to={'/contact'} className="nav-link">
+                                Contatti
                               </Link>
                             </li>
                           </ul>

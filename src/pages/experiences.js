@@ -1,64 +1,37 @@
 import { graphql } from 'gatsby'
 import React from 'react'
 import get from 'lodash/get'
+// import ScrollAnimation from 'react-animate-on-scroll'
 
-import Post from 'templates/post'
-import Room from 'templates/room'
 import Meta from 'components/meta'
 import Layout from 'components/layout'
-import Landing from 'components/landing'
-import Booking from 'components/booking'
-import Welcome from 'components/welcome'
-import Breakfast from 'components/breakfast'
-import Rooms from 'components/rooms'
+import HeroImage from 'components/hero-image'
 import Comments from 'components/comments'
-import Experiences from 'components/experiences'
+import RoomsFull from 'components/room-overview'
 import ReservationBanner from 'components/reservation-banner'
 
-const IndexPage = ({ data, location }) => {
-  const posts = get(data, 'remark.docs').filter(
-    x => x.doc.frontmatter.layout === 'post'
-  )
+const ExperiencesPage = ({ data, location }) => {
   const rooms = get(data, 'remark.docs').filter(
     x => x.doc.frontmatter.layout === 'room'
   )
   return (
     <Layout location={location} site={get(data, 'site.meta')}>
       <Meta site={get(data, 'site.meta')} />
-      <Landing />
-      <Booking />
-      <Welcome />
-      <Breakfast />
-      <Rooms rooms={rooms} />
-      <Experiences />
-      <Comments />
+      <HeroImage
+        heading={'Le Camere'}
+        breadcrumbs={[{ name: 'home', url: '/' }, { name: 'Le Camere' }]}
+      />
+      <RoomsFull rooms={rooms} />
+      {/* <Comments /> */}
       <ReservationBanner />
-      {/* {posts.map(({ doc }, i) => (
-        <Post
-          data={doc}
-          options={{
-            isIndex: true,
-          }}
-          key={i}
-        />
-      ))} */}
-      {/* {rooms.map(({ doc }, i) => (
-        <Room
-          data={doc}
-          options={{
-            isIndex: true,
-          }}
-          key={i}
-        />
-      ))} */}
     </Layout>
   )
 }
 
-export default IndexPage
+export default ExperiencesPage
 
 export const pageQuery = graphql`
-  query IndexQuery {
+  query ExperiencesQuery {
     site {
       meta: siteMetadata {
         title

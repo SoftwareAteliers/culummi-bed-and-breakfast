@@ -8,7 +8,7 @@ const Rooms = ({ rooms }) => (
       <div className="row justify-content-center text-center mb-5">
         <div className="col-md-7">
           <ScrollAnimation animateOnce animateIn="fadeInUp" duration={0.5}>
-            <h2 className="heading">Rooms &amp; Suites</h2>
+            <h2 className="heading">Le Camere</h2>
           </ScrollAnimation>
           <ScrollAnimation
             animateOnce
@@ -16,12 +16,12 @@ const Rooms = ({ rooms }) => (
             delay={100}
             duration={0.5}
           >
-            <p>
+            {/* <p>
               Far far away, behind the word mountains, far from the countries
               Vokalia and Consonantia, there live the blind texts. Separated
               they live in Bookmarksgrove right at the coast of the Semantics, a
               large language ocean.
-            </p>
+            </p> */}
           </ScrollAnimation>
         </div>
       </div>

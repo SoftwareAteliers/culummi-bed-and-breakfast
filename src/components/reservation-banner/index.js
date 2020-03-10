@@ -14,7 +14,7 @@ const ReservationBanner = () => {
           <Fade top>
             <div className="col-12 col-md-6 text-center mb-4 mb-md-0 text-md-left">
               <h2 className="text-white font-weight-bold">
-                A Best Place To Stay. Reserve Now!
+                Goditi un soggiorno meraviglioso!
               </h2>
             </div>
           </Fade>
@@ -24,7 +24,7 @@ const ReservationBanner = () => {
                 to={'/contact'}
                 className="btn btn-outline-white-primary py-3 text-white px-5"
               >
-                Reserve Now
+                Prenota ora
               </Link>
             </div>
           </Fade>

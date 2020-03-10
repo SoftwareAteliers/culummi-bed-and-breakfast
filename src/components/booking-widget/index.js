@@ -17,7 +17,7 @@ class BookingWidget extends Component {
     return (
       <div className="hotel-reservation--area mb-100">
         <div className="form-group mb-30">
-          <label htmlFor="checkInDate">Date</label>
+          <label htmlFor="checkInDate">Data</label>
           <div className="input-daterange" id="datepicker">
             <div className="row no-gutters">
               <DateRangePicker
@@ -52,11 +52,11 @@ class BookingWidget extends Component {
           </div>
         </div>
         <div className="form-group mb-30">
-          <label htmlFor="guests">Guests</label>
+          <label htmlFor="guests">Ospiti</label>
           <div className="row">
             <div className="col-6">
               <select name="adults" id="guests" className="form-control">
-                <option value="adults">Adults</option>
+                <option value="adults">Adulti</option>
                 <option value="0">1</option>
                 <option value="1">1</option>
                 <option value="2">2</option>
@@ -71,7 +71,7 @@ class BookingWidget extends Component {
             </div>
             <div className="col-6">
               <select name="children" id="children" className="form-control">
-                <option value="children">Children</option>
+                <option value="children">Bambini</option>
                 <option value="0">1</option>
                 <option value="1">1</option>
                 <option value="2">2</option>

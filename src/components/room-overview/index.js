@@ -4,10 +4,10 @@ import Room from 'components/room-overview-single'
 const RoomsFull = ({ rooms }) => (
   <section className="section bg-light">
     <div className="container">
-      <div className="row justify-content-center text-center mb-5">
+      {/* <div className="row justify-content-center text-center mb-5">
         <div className="col-md-7">
           <h2 className="heading" data-aos="fade">
-            Great Offers
+            Le Camere
           </h2>
           <p data-aos="fade">
             Far far away, behind the word mountains, far from the countries
@@ -16,7 +16,7 @@ const RoomsFull = ({ rooms }) => (
             language ocean.
           </p>
         </div>
-      </div>
+      </div> */}
       {rooms.map((room, i) => (
         <Room room={room} leftToRight={i % 2} key={i} />
       ))}

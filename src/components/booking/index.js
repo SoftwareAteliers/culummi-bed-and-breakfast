@@ -53,7 +53,7 @@ const Booking = () => (
                     htmlFor="adults"
                     className="font-weight-bold text-black"
                   >
-                    Adults
+                    Adulti
                   </label>
                   <div className="field-icon-wrap">
                     <div className="icon">
@@ -72,7 +72,7 @@ const Booking = () => (
                     htmlFor="children"
                     className="font-weight-bold text-black"
                   >
-                    Children
+                    Bambini
                   </label>
                   <div className="field-icon-wrap">
                     <div className="icon">
@@ -90,7 +90,7 @@ const Booking = () => (
             </div>
             <div className="col-md-6 col-lg-3 align-self-end">
               <button className="btn btn-primary btn-block text-white">
-                Check Availabilty
+                Verifica disponibilità
               </button>
             </div>
           </div>

@@ -34,7 +34,7 @@ const RoomFull = ({ room, leftToRight }) => {
           </span>
           <p>
             <Link className="btn btn-primary text-white" to={path}>
-              Book Now
+              Dettagli
             </Link>
           </p>
         </div>
