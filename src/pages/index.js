@@ -13,6 +13,7 @@ import Breakfast from 'components/breakfast'
 import Rooms from 'components/rooms'
 import Comments from 'components/comments'
 import Experiences from 'components/experiences'
+import Gallery from 'components/gallery'
 import ReservationBanner from 'components/reservation-banner'
 
 const IndexPage = ({ data, location }) => {
@@ -30,6 +31,7 @@ const IndexPage = ({ data, location }) => {
       <Welcome />
       <Breakfast />
       <Rooms rooms={rooms} />
+      <Gallery />
       <Experiences />
       <Comments />
       <ReservationBanner />

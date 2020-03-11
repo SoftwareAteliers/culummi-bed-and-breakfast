@@ -48,16 +48,19 @@ class Welcome extends React.Component {
                 te li culummi” ora occupata dall’abitato moderno.
               </p>
               {this.state.showMore && (
-                <p className="mb-4 text-justify">
-                  L'antica citta messapica del VI sec.a.C con i suoi importanti
-                  resti e il Museo Diffuso è facilmente raggiungibile a piedi in
-                  pochi minuti. “Culummi” è un piccolo B&B a conduzione
-                  familiare in un immobile appena ristrutturato e arredato,
-                  collocato in posizione strategica per raggiungere sia la Città
-                  di Lecce che la costa Adriatica e Jonica e che basa la propria
-                  offerta ricettiva su un forte legame con la tradizione, la
-                  cultura e la identità del Salento.
-                </p>
+                <ScrollAnimation animateOnce animateIn="fadeIn" duration={0.5}>
+                  <p className="mb-4 text-justify">
+                    L'antica citta messapica del VI sec.a.C con i suoi
+                    importanti resti e il Museo Diffuso è facilmente
+                    raggiungibile a piedi in pochi minuti. “Culummi” è un
+                    piccolo B&B a conduzione familiare in un immobile appena
+                    ristrutturato e arredato, collocato in posizione strategica
+                    per raggiungere sia la Città di Lecce che la costa Adriatica
+                    e Jonica e che basa la propria offerta ricettiva su un forte
+                    legame con la tradizione, la cultura e la identità del
+                    Salento.
+                  </p>
+                </ScrollAnimation>
               )}
               <p className="mb-4">A partire dal nome: ”Culummi” appunto.</p>
               <p>
@@ -65,7 +68,8 @@ class Welcome extends React.Component {
                   className="btn btn-primary text-white py-2 mr-3"
                   onClick={this.showMore}
                 >
-                  Scopri di più
+                  {/* Scopri di più */}
+                  Per saperne di più
                 </a>
                 <span className="mr-3 font-family-serif">
                   <em>o</em>

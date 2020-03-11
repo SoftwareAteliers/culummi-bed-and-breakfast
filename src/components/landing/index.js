@@ -10,16 +10,25 @@ const LandingPage = () => (
   >
     <div className="container">
       <div className="row site-hero-inner justify-content-center align-items-center">
-        <ScrollAnimation
-          animateOnce
-          className="col-md-10 text-center"
-          animateIn="flipInY"
-        >
-          <span className="custom-caption text-uppercase text-white d-block  mb-3">
-            Benvenuti al Culummi Bed and Breakfast
-          </span>
-          <h1 className="heading">il soggiorno perfetto</h1>
-        </ScrollAnimation>
+        <div className="col-md-10 text-center">
+          <ScrollAnimation
+            animateOnce
+            className="text-center"
+            animateIn="flipInY"
+          >
+            <span className="custom-caption text-uppercase text-white d-block mb-3">
+              Benvenuti al Culummi Bed and Breakfast
+            </span>
+          </ScrollAnimation>
+          <ScrollAnimation
+            animateOnce
+            className="text-center"
+            animateIn="flipInY"
+            delay={500}
+          >
+            <h1 className="heading">il soggiorno perfetto</h1>
+          </ScrollAnimation>
+        </div>
       </div>
     </div>
 

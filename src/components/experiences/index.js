@@ -24,7 +24,7 @@ const Experiences = () => {
           </div>
         </div>
         <div className="row">
-          <div className="col-xs-12 col-lg-3">
+          <div className="col-xs-12 col-sm-6 col-md-3">
             <ScrollAnimation animateOnce animateIn="fadeIn">
               <p className="lead">Hiking</p>
               <figure className="img-wrap img-fluid img-hover-zoom">
@@ -35,7 +35,7 @@ const Experiences = () => {
               <p className="caption">Black Creek State Forest</p>
             </ScrollAnimation>
           </div>
-          <div className="col-xs-12 col-lg-3">
+          <div className="col-xs-12 col-sm-6 col-md-3">
             <ScrollAnimation animateOnce animateIn="fadeIn">
               <p className="lead">Adventure</p>
               <figure className="img-wrap img-fluid img-hover-zoom">
@@ -46,7 +46,7 @@ const Experiences = () => {
               <p className="caption">Skydive in the Ranch</p>
             </ScrollAnimation>
           </div>
-          <div className="col-xs-12 col-lg-3">
+          <div className="col-xs-12 col-sm-6 col-md-3">
             <ScrollAnimation animateOnce animateIn="fadeIn">
               <p className="lead">Bicycles</p>
               <figure className="img-wrap img-fluid img-hover-zoom">
@@ -57,7 +57,7 @@ const Experiences = () => {
               <p className="caption">Exiting Bicycle Tours</p>
             </ScrollAnimation>
           </div>
-          <div className="col-xs-12 col-lg-3">
+          <div className="col-xs-12 col-sm-6 col-md-3">
             <ScrollAnimation animateOnce animateIn="fadeIn">
               <p className="lead">Fishing</p>
               <figure className="img-wrap img-fluid img-hover-zoom">
