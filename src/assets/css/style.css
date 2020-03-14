@@ -49,9 +49,9 @@ h5 {
   background: #f2f4fb !important;
 }
 
-.container-fluid {
+/* .container-fluid {
   max-width: 1600px;
-}
+} */
 
 .btn {
   padding-left: 30px;
@@ -2029,4 +2029,13 @@ textarea.form-control {
     padding-left: 0;
     margin-left: 0;
   }
+}
+
+.test-img {
+  background-color: #54595f;
+  background-image: url(https://demo.themovation.com/bellevue/hotel/wp-content/uploads/sites/9/2017/12/hotel_demo_32.jpg);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 450px;
 }

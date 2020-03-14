@@ -12,7 +12,7 @@ import Welcome from 'components/welcome'
 import Breakfast from 'components/breakfast'
 import Rooms from 'components/rooms'
 import Comments from 'components/comments'
-import Experiences from 'components/experiences'
+import ExperiencesWidget from 'components/experiences-widget'
 import Gallery from 'components/gallery'
 import ReservationBanner from 'components/reservation-banner'
 
@@ -32,7 +32,7 @@ const IndexPage = ({ data, location }) => {
       <Breakfast />
       <Rooms rooms={rooms} />
       <Gallery />
-      <Experiences />
+      <ExperiencesWidget />
       <Comments />
       <ReservationBanner />
       {/* {posts.map(({ doc }, i) => (
