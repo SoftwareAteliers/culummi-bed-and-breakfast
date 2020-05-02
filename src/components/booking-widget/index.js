@@ -9,29 +9,39 @@ class BookingWidget extends Component {
     this.state = {
       startDate: null,
       endDate: null,
+      guestCount: '',
+      childrenCount: '',
       focusedInput: null,
     }
   }
 
+  handleSubmit = event => {
+    event.preventDefault()
+    alert(`Welcome ${this.state.startDate} ${this.state.endDate}!`)
+  }
+
   render() {
     return (
-      <div className="hotel-reservation--area mb-100">
-        <div className="form-group mb-30">
-          <label htmlFor="checkInDate">Data</label>
-          <div className="input-daterange" id="datepicker">
-            <div className="row no-gutters">
-              <DateRangePicker
-                startDate={this.state.startDate} // momentPropTypes.momentObj or null,
-                startDateId="your_unique_start_date_id" // PropTypes.string.isRequired,
-                endDate={this.state.endDate} // momentPropTypes.momentObj or null,
-                endDateId="your_unique_end_date_id" // PropTypes.string.isRequired,
-                onDatesChange={({ startDate, endDate }) =>
-                  this.setState({ startDate, endDate })
-                } // PropTypes.func.isRequired,
-                focusedInput={this.state.focusedInput} // PropTypes.oneOf([START_DATE, END_DATE]) or null,
-                onFocusChange={focusedInput => this.setState({ focusedInput })} // PropTypes.func.isRequired,
-              />
-              {/* <div className="col-6">
+      <form onSubmit={this.handleSubmit}>
+        <div className="hotel-reservation--area mb-100">
+          <div className="form-group mb-30">
+            <label htmlFor="checkInDate">Data</label>
+            <div className="input-daterange" id="datepicker">
+              <div className="row no-gutters">
+                <DateRangePicker
+                  startDate={this.state.startDate} // momentPropTypes.momentObj or null,
+                  startDateId="start_date_id" // PropTypes.string.isRequired,
+                  endDate={this.state.endDate} // momentPropTypes.momentObj or null,
+                  endDateId="end_date_id" // PropTypes.string.isRequired,
+                  onDatesChange={({ startDate, endDate }) =>
+                    this.setState({ startDate, endDate })
+                  } // PropTypes.func.isRequired,
+                  focusedInput={this.state.focusedInput} // PropTypes.oneOf([START_DATE, END_DATE]) or null,
+                  onFocusChange={focusedInput =>
+                    this.setState({ focusedInput })
+                  } // PropTypes.func.isRequired,
+                />
+                {/* <div className="col-6">
               <input
                 type="text"
                 className="input-small form-control"
@@ -48,56 +58,71 @@ class BookingWidget extends Component {
                 placeholder="Check Out"
               />
             </div> */}
+              </div>
             </div>
           </div>
-        </div>
-        <div className="form-group mb-30">
-          <label htmlFor="guests">Ospiti</label>
-          <div className="row">
-            <div className="col-6">
-              <select name="adults" id="guests" className="form-control">
-                <option value="adults">Adulti</option>
-                <option value="0">1</option>
-                <option value="1">1</option>
-                <option value="2">2</option>
-                <option value="3">3</option>
-                <option value="4">4</option>
-                <option value="5">5</option>
-                <option value="6">6</option>
-                <option value="7">7</option>
-                <option value="8">8</option>
-                <option value="9">9</option>
-              </select>
-            </div>
-            <div className="col-6">
-              <select name="children" id="children" className="form-control">
-                <option value="children">Bambini</option>
-                <option value="0">1</option>
-                <option value="1">1</option>
-                <option value="2">2</option>
-                <option value="3">3</option>
-                <option value="4">4</option>
-                <option value="5">5</option>
-                <option value="6">6</option>
-                <option value="7">7</option>
-                <option value="8">8</option>
-                <option value="9">9</option>
-              </select>
+          <div className="form-group mb-30">
+            <label htmlFor="guests">Ospiti</label>
+            <div className="row">
+              <div className="col-6">
+                <select
+                  name="adults"
+                  id="guests"
+                  className="form-control"
+                  // onChange={this.onGuestCountChange}
+                  onChange={e => this.setState({ guestCount: e.target.value })}
+                  value={this.state.guestCount}
+                >
+                  <option value="">Adulti</option>
+                  {[...Array(11)].map((e, i) => {
+                    return (
+                      <option key={i} value={i}>
+                        {i}
+                      </option>
+                    )
+                  })}
+                </select>
+              </div>
+              <div className="col-6">
+                <select
+                  name="children"
+                  id="children"
+                  className="form-control"
+                  type="number"
+                  onChange={e =>
+                    this.setState({ childrenCount: e.target.value })
+                  }
+                  // onChange={this.onChildrenCountChange}
+                  value={this.state.childrenCount}
+                >
+                  <option value="">Bambini</option>
+                  {[...Array(10)].map((e, i) => {
+                    return (
+                      <option key={i} value={i}>
+                        {i}
+                      </option>
+                    )
+                  })}
+                </select>
+              </div>
             </div>
           </div>
+          <div className="form-group">
+            <button
+              type="submit"
+              className="btn btn-primary text-white my-3 py-3 px-5 font-weight-bold w-100"
+            >
+              Verifica disponibilità
+            </button>
+            {/* <Link
+              to={'/contact'}
+              className="btn btn-primary text-white my-3 py-3 px-5 font-weight-bold w-100"
+            >
+              Verifica disponibilità
+            </Link> */}
+          </div>
         </div>
-        <div className="form-group">
-          {/* <button type="submit" className="btn roberto-btn w-100">
-                      Check Available
-                    </button> */}
-          <Link
-            to={'/contact'}
-            className="btn btn-primary text-white my-3 py-3 px-5 font-weight-bold w-100"
-          >
-            Verifica disponibilità
-          </Link>
-        </div>
-      </div>
+      </form>
     )
   }
 }

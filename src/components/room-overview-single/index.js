@@ -19,7 +19,7 @@ const RoomFull = ({ room, leftToRight }) => {
           style={{ backgroundImage: 'url(' + testImage2 + ')' }}
         ></a>
         <div className={'text' + (leftToRight ? ' order-1' : '')}>
-          <h2 className="mb-4 display-4 text-primary">{title}</h2>
+          <h2 className="mb-4 display-4">{title}</h2>
           <p>
             Far far away, behind the word mountains, far from the countries
             Vokalia and Consonantia, there live the blind texts. Separated they
@@ -29,7 +29,7 @@ const RoomFull = ({ room, leftToRight }) => {
 
           <span className="text-uppercase letter-spacing-2">a partire da</span>
           <span className="d-block mb-4">
-            <span className="display-4 text-primary">{price} €</span>
+            <span className="h1 text-primary">{price} €</span>
             <span className="text-uppercase letter-spacing-2"> / notte</span>
           </span>
           <p>

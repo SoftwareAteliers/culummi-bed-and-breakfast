@@ -12,8 +12,7 @@ const Room = ({ room }) => {
     <ScrollAnimation
       animateOnce
       className="col-md-6 col-lg-4"
-      animateIn="fadeInUp"
-      duration={0.5}
+      animateIn="fadeIn"
     >
       <Link style={{ boxShadow: 'none' }} to={path}>
         <figure className="img-wrap">

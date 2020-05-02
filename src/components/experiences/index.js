@@ -1,5 +1,5 @@
 import React from 'react'
-import { Link } from 'gatsby'
+import { graphql, Link, useStaticQuery } from 'gatsby'
 import ScrollAnimation from 'react-animate-on-scroll'
 import ReservationBanner from 'components/reservation-banner'
 import get from 'lodash/get'
@@ -7,8 +7,25 @@ import experienceImg1 from 'img/experience/experience_1.jpg'
 import experienceImg2 from 'img/experience/experience_2.jpg'
 import experienceImg3 from 'img/experience/experience_3.jpg'
 import experienceImg4 from 'img/experience/experience_4.jpg'
+import BackgroundImage from 'gatsby-background-image'
 
 const Experiences = () => {
+  const { placeholderImage } = useStaticQuery(
+    graphql`
+      query {
+        placeholderImage: file(relativePath: { eq: "hotel_demo_32.jpg" }) {
+          childImageSharp {
+            fluid(maxWidth: 300) {
+              ...GatsbyImageSharpFluid_withWebp_noBase64
+            }
+          }
+        }
+      }
+    `
+  )
+  // Single Image Data
+  const imageData = placeholderImage.childImageSharp.fluid
+
   return (
     <div>
       <div className="section container">
@@ -38,7 +55,36 @@ const Experiences = () => {
               </p>
             </div>
           </div>
-          <div className="col-md-6 test-img"></div>
+          <div className="col-md-6">
+            <BackgroundImage
+              Tag="section"
+              // To style via external CSS see layout.css last examples:
+              // className="test"
+              fluid={imageData}
+              backgroundColor={`#040e18`}
+              // Title get's passed to both container and noscriptImg.
+              title="gbitest"
+              // You are able to set a classId and style by wrapper (see below or
+              // https://github.com/timhagn/gatsby-background-image/#styling--passed-through-styles):
+              // classId="gbi"
+              // style={{
+              //   // Defaults are overwrite-able by setting one of the following:
+              //   // backgroundSize: '',
+              //   // backgroundPosition: '',
+              //   // backgroundRepeat: '',
+              // }}
+              // To "force" the classic fading in of every image (especially on
+              // imageData change for fluid / fixed) by setting `soft` on `fadeIn`:
+              // fadeIn={`soft`}
+              // To be able to use stacking context changing elements yourself,
+              // set this to true to disable the "opacity hack":
+              // preserveStackingContext={true}
+              // You can "safely" (look them up beforehand ; ) add other props:
+              id="gbitest"
+              role="img"
+              aria-label="gbitest"
+            ></BackgroundImage>
+          </div>
 
           <div className="col-md-6 test-img"></div>
           <div className="col-md-6">

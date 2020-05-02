@@ -15,7 +15,7 @@ const HeroImage = ({ heading, breadcrumbs }) => (
         <ScrollAnimation
           animateOnce
           className="col-md-10 text-center"
-          animateIn="fadeInUp"
+          animateIn="fadeIn"
           duration={0.5}
         >
           <h1 className="heading mb-3">{heading}</h1>
