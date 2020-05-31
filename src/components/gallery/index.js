@@ -1,6 +1,5 @@
 import React from 'react'
 import { Link } from 'gatsby'
-import ScrollAnimation from 'react-animate-on-scroll'
 import galleryImg1 from 'img/gallery/1.jpg'
 import galleryImg2 from 'img/gallery/2.jpg'
 import galleryImg3 from 'img/gallery/3.jpg'

@@ -79,7 +79,9 @@ class ReservationForm extends React.Component {
                   this.setState({ startDate, endDate })
                 } // PropTypes.func.isRequired,
                 focusedInput={this.state.focusedInput} // PropTypes.oneOf([START_DATE, END_DATE]) or null,
-                onFocusChange={focusedInput => this.setState({ focusedInput })} // PropTypes.func.isRequired,
+                onFocusChange={(focusedInput) =>
+                  this.setState({ focusedInput })
+                } // PropTypes.func.isRequired,
               />
             </div>
           </div>
@@ -99,7 +101,7 @@ class ReservationForm extends React.Component {
                 id="guests"
                 className="form-control"
                 // onChange={this.onGuestCountChange}
-                onChange={e => this.setState({ guestCount: e.target.value })}
+                onChange={(e) => this.setState({ guestCount: e.target.value })}
                 value={this.state.guestCount}
               >
                 <option value="">Adulti</option>
@@ -127,7 +129,9 @@ class ReservationForm extends React.Component {
                 id="children"
                 className="form-control"
                 type="number"
-                onChange={e => this.setState({ childrenCount: e.target.value })}
+                onChange={(e) =>
+                  this.setState({ childrenCount: e.target.value })
+                }
                 // onChange={this.onChildrenCountChange}
                 value={this.state.childrenCount}
               >

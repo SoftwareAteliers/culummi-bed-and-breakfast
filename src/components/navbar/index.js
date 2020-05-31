@@ -55,7 +55,7 @@ const Navbar = class extends React.Component {
         `}
         render={({ allMarkdownRemark }) => {
           const rooms = allMarkdownRemark.docs.filter(
-            x => x.doc.frontmatter.layout === 'room'
+            (x) => x.doc.frontmatter.layout === 'room'
           )
 
           return (

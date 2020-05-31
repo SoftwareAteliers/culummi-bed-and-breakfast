@@ -24,7 +24,7 @@ class BookingWidget extends React.Component {
     }
   }
 
-  handleSubmit = event => {
+  handleSubmit = (event) => {
     event.preventDefault()
 
     const query = queryString.stringify(
@@ -74,7 +74,7 @@ class BookingWidget extends React.Component {
                     this.setState({ startDate, endDate })
                   } // PropTypes.func.isRequired,
                   focusedInput={this.state.focusedInput} // PropTypes.oneOf([START_DATE, END_DATE]) or null,
-                  onFocusChange={focusedInput =>
+                  onFocusChange={(focusedInput) =>
                     this.setState({ focusedInput })
                   } // PropTypes.func.isRequired,
                 />
@@ -107,7 +107,9 @@ class BookingWidget extends React.Component {
                   id="guests"
                   className="form-control"
                   // onChange={this.onGuestCountChange}
-                  onChange={e => this.setState({ guestCount: e.target.value })}
+                  onChange={(e) =>
+                    this.setState({ guestCount: e.target.value })
+                  }
                   value={this.state.guestCount}
                 >
                   <option value="">Adulti</option>
@@ -120,7 +122,7 @@ class BookingWidget extends React.Component {
                   id="children"
                   className="form-control"
                   type="number"
-                  onChange={e =>
+                  onChange={(e) =>
                     this.setState({ childrenCount: e.target.value })
                   }
                   // onChange={this.onChildrenCountChange}

@@ -4,7 +4,7 @@ import './style.scss'
 
 const Breadcrumbs = ({ data }) => (
   <ul className="custom-breadcrumbs mb-4">
-    {data.map(function(breadcrumb, index) {
+    {data.map(function (breadcrumb, index) {
       return breadcrumb.url ? (
         <li key={index}>
           <Link to={breadcrumb.url}>{breadcrumb.name}</Link>

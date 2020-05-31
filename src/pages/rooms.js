@@ -12,7 +12,7 @@ import ReservationBanner from 'components/reservation-banner'
 
 const RoomsPage = ({ data, location }) => {
   const rooms = get(data, 'remark.docs').filter(
-    x => x.doc.frontmatter.layout === 'room'
+    (x) => x.doc.frontmatter.layout === 'room'
   )
   return (
     <Layout location={location} site={get(data, 'site.meta')}>
