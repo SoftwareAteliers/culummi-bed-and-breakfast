@@ -26,7 +26,7 @@ import 'css/jquery.timepicker.css'
 import 'css/fancybox.min.css'
 import 'fonts/ionicons/css/ionicons.min.css'
 // import 'fonts/fontawesome/css/font-awesome.min.css'
-import 'css/style.css'
+import 'scss/style.scss'
 import 'css/responsive.css'
 // ----------------- template colorlib
 

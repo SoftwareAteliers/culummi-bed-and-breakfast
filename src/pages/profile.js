@@ -67,13 +67,13 @@ class Profile extends React.Component {
                 <div className="col-lg-3 col-6">
                   <Icon title="Node.js" name="node" />
                 </div>
-                <div className="col-lg-3 col-6 ">
+                <div className="col-lg-3 col-6">
                   <Icon title="PHP" name="php" />
                 </div>
-                <div className="col-lg-3 col-6 ">
+                <div className="col-lg-3 col-6">
                   <Icon title="AWS" name="aws" />
                 </div>
-                <div className="col-lg-3 col-6 ">
+                <div className="col-lg-3 col-6">
                   <Icon title="Swift" name="apple" />
                 </div>
               </div>
