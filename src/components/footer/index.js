@@ -114,7 +114,10 @@ const Footer = ({ site }) => (
       </div>
       <div className="row pt-5">
         <p className="col-md-6 text-left">
-          {get(site, 'author')}&nbsp;&copy;&nbsp;2020&nbsp;|&nbsp;
+          {get(site, 'author')}
+          <span className="px-1">&copy;</span>
+          2020
+          <span className="px-2">|</span>
           <a href="https://colorlib.com" target="_blank">
             Colorlib
           </a>
