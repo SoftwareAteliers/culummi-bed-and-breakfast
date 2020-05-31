@@ -6,7 +6,7 @@ const ContactForm = () => {
       <div className="row">
         <div className="col-md-6 form-group">
           <label htmlFor="name">Name</label>
-          <input type="text" id="name" className="form-control " />
+          <input type="text" id="name" className="form-control" />
         </div>
         <div className="col-md-6 form-group">
           <label htmlFor="phone">Phone</label>
