@@ -1,26 +1,63 @@
-import React, { Component } from 'react'
-import { Link } from 'gatsby'
+import React from 'react'
+// import { Link } from 'gatsby'
 import './style.scss'
 import { DateRangePicker } from 'react-dates'
+import queryString from 'query-string'
+import { navigate } from 'gatsby'
+import * as moment from 'moment'
 
-class BookingWidget extends Component {
+class BookingWidget extends React.Component {
   constructor(props) {
     super(props)
+
+    const loc = { location }
+    const queryParams = queryString.parse(loc.location.search)
+
     this.state = {
       startDate: null,
       endDate: null,
-      guestCount: '',
-      childrenCount: '',
+      maxGuestCount: 10,
+      guestCount: queryParams.guest || '',
+      maxChildrenCount: 9,
+      childrenCount: queryParams.children || '',
       focusedInput: null,
     }
   }
 
   handleSubmit = event => {
     event.preventDefault()
-    alert(`Welcome ${this.state.startDate} ${this.state.endDate}!`)
+
+    const query = queryString.stringify(
+      {
+        startDate: moment.isMoment(this.state.startDate)
+          ? this.state.startDate.format('YYYY-MM-DD')
+          : null,
+        endDate: moment.isMoment(this.state.endDate)
+          ? this.state.endDate.format('YYYY-MM-DD')
+          : null,
+        guests: this.state.guestCount,
+        children: this.state.childrenCount,
+      },
+      { skipNull: true }
+    )
+    navigate(`/contact?${query}`, { replace: true })
+  }
+
+  renderSelectItems(min, max) {
+    const selectItems = []
+    for (var i = min; i <= max; i++) {
+      selectItems.push(
+        <option key={i} value={i}>
+          {i}
+        </option>
+      )
+    }
+    return selectItems
   }
 
   render() {
+    // const a = useQueryParam('guests', NumberParam)
+
     return (
       <form onSubmit={this.handleSubmit}>
         <div className="hotel-reservation--area mb-100">
@@ -74,13 +111,7 @@ class BookingWidget extends Component {
                   value={this.state.guestCount}
                 >
                   <option value="">Adulti</option>
-                  {[...Array(11)].map((e, i) => {
-                    return (
-                      <option key={i} value={i}>
-                        {i}
-                      </option>
-                    )
-                  })}
+                  {this.renderSelectItems(0, 10)}
                 </select>
               </div>
               <div className="col-6">
@@ -96,13 +127,7 @@ class BookingWidget extends Component {
                   value={this.state.childrenCount}
                 >
                   <option value="">Bambini</option>
-                  {[...Array(10)].map((e, i) => {
-                    return (
-                      <option key={i} value={i}>
-                        {i}
-                      </option>
-                    )
-                  })}
+                  {this.renderSelectItems(0, 9)}
                 </select>
               </div>
             </div>
@@ -127,4 +152,5 @@ class BookingWidget extends Component {
   }
 }
 
+// export default withRouter(BookingWidget)
 export default BookingWidget
